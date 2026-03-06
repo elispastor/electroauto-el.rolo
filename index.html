@@ -118,7 +118,7 @@
             color: #000;
         }
 
-        /* ===== HERO CON FERRARI (IMAGEN MÁS PEQUEÑA) ===== */
+        /* ===== HERO CON FERRARI (SIN FONDOS NEGROS) ===== */
         .hero {
             height: 100vh;
             position: relative;
@@ -135,9 +135,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('portada.jpg') center/contain no-repeat;
-            background-color: #000;
-            background-position: center 40%;
+            background: url('portada.jpg') center/cover no-repeat;
+            background-position: center 30%;
             z-index: -1;
         }
 
@@ -145,25 +144,8 @@
             max-width: 900px;
             padding: 0 20px;
             width: 100%;
-            background: rgba(0,0,0,0.3);
-            backdrop-filter: blur(5px);
-            border-radius: 30px;
-            padding: 40px 20px;
-            border: 1px solid rgba(255,215,0,0.3);
-        }
-
-        .hero-badge {
-            background: rgba(255, 215, 0, 0.2);
-            backdrop-filter: blur(8px);
-            border: 1.5px solid #ffd700;
-            padding: 8px 20px;
-            border-radius: 40px;
-            display: inline-block;
-            font-weight: 500;
-            color: #ffd700;
-            letter-spacing: 1.5px;
-            margin-bottom: 20px;
-            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
         }
 
         .hero h1 {
@@ -171,7 +153,8 @@
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 10px;
-            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.8), 0 0 20px rgba(255,215,0,0.5);
+            color: white;
         }
 
         .hero h1 span {
@@ -180,16 +163,42 @@
             font-size: 3rem;
             letter-spacing: 4px;
             margin-top: 5px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
         }
 
         .hero p {
             font-size: 1.3rem;
-            color: #fff;
+            color: white;
             max-width: 600px;
             margin: 15px auto 0;
             line-height: 1.6;
+            font-weight: 600;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.2);
+            padding: 8px 20px;
+            border-radius: 40px;
+            display: inline-block;
+            backdrop-filter: blur(2px);
+        }
+
+        /* BADGE DE CÚCUTA - AHORA ABAJO SIN TAPAR EL CARRO */
+        .location-badge {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            border: 1.5px solid #ffd700;
+            padding: 8px 25px;
+            border-radius: 40px;
+            display: inline-block;
             font-weight: 500;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            color: #ffd700;
+            letter-spacing: 1.5px;
+            font-size: 1rem;
+            z-index: 3;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
         }
 
         /* ===== SERVICIOS ===== */
@@ -562,12 +571,13 @@
                 font-size: 1.1rem;
             }
             
-            .hero-content {
-                padding: 30px 15px;
-            }
-            
             .section-title h2 {
                 font-size: 2.2rem;
+            }
+            
+            .location-badge {
+                font-size: 0.9rem;
+                padding: 6px 18px;
             }
         }
 
@@ -582,11 +592,13 @@
             
             .hero p {
                 font-size: 1rem;
+                padding: 5px 15px;
             }
             
-            .hero-badge {
+            .location-badge {
                 font-size: 0.8rem;
-                padding: 6px 15px;
+                padding: 5px 15px;
+                bottom: 20px;
             }
             
             .qr-box {
@@ -619,13 +631,17 @@
         </ul>
     </nav>
 
-    <!-- HERO CON FERRARI (IMAGEN MÁS PEQUEÑA Y VISIBLE) -->
+    <!-- HERO CON FERRARI - SIN FONDOS NEGROS -->
     <section class="hero" id="inicio">
         <div class="hero-background"></div>
         <div class="hero-content">
-            <div class="hero-badge">⚡ CÚCUTA - NORTE DE SANTANDER ⚡</div>
             <h1>ELECTRO AUTO<br><span>EL ROLO</span></h1>
             <p>⚡ Desvare 12V/24V • Arranques • Alternadores ⚡</p>
+        </div>
+        
+        <!-- BADGE DE CÚCUTA - AHORA ABAJO SIN TAPAR EL CARRO -->
+        <div class="location-badge">
+            <i class="fas fa-map-marker-alt"></i> CÚCUTA - NORTE DE SANTANDER
         </div>
     </section>
 
@@ -697,7 +713,7 @@
         </div>
     </section>
 
-    <!-- CONTACTO CON QR FUNCIONAL (AHORA SÍ PUESTO) -->
+    <!-- CONTACTO CON QR FUNCIONAL -->
     <section class="contact-section" id="contacto">
         <div class="contact-container">
             <h2>CONTACTO</h2>
