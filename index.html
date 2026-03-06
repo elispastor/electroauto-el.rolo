@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELECTRO AUTO EL ROLO | Taller de Arranques</title>
+    <title>ELECTRO AUTO EL ROLO | Especialistas Eléctricos</title>
     
     <!-- Fonts e Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -118,7 +118,7 @@
             color: #000;
         }
 
-        /* ===== HERO CON PORTADA (AJUSTADA) ===== */
+        /* ===== HERO CON FERRARI (IMAGEN MÁS PEQUEÑA) ===== */
         .hero {
             height: 100vh;
             position: relative;
@@ -135,21 +135,21 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(0,0,0,0.75), rgba(0,0,0,0.6)), url('portada.jpg') center/cover;
-            background-attachment: fixed;
+            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('portada.jpg') center/contain no-repeat;
+            background-color: #000;
+            background-position: center 40%;
             z-index: -1;
-            animation: subtleZoom 15s infinite alternate;
-        }
-
-        @keyframes subtleZoom {
-            from { transform: scale(1); }
-            to { transform: scale(1.05); }
         }
 
         .hero-content {
             max-width: 900px;
             padding: 0 20px;
             width: 100%;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
+            padding: 40px 20px;
+            border: 1px solid rgba(255,215,0,0.3);
         }
 
         .hero-badge {
@@ -162,47 +162,34 @@
             font-weight: 500;
             color: #ffd700;
             letter-spacing: 1.5px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             font-size: 0.9rem;
         }
 
-        .hero h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #fff, #ffd700);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
         .hero h1 {
-            font-size: 4.5rem;
+            font-size: 5rem;
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 10px;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
         }
 
         .hero h1 span {
             color: #ffd700;
             display: block;
-            font-size: 5rem;
-            letter-spacing: 2px;
+            font-size: 3rem;
+            letter-spacing: 4px;
+            margin-top: 5px;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.3rem;
+            color: #fff;
             max-width: 600px;
             margin: 15px auto 0;
             line-height: 1.6;
-            background: rgba(0,0,0,0.3);
-            padding: 10px 20px;
-            border-radius: 40px;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,215,0,0.3);
+            font-weight: 500;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
 
         /* ===== SERVICIOS ===== */
@@ -554,57 +541,47 @@
             }
             
             .hero h1 {
-                font-size: 3.5rem;
-            }
-            
-            .hero h1 span {
                 font-size: 4rem;
-            }
-            
-            .hero h2 {
-                font-size: 1.6rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .hero h1 span {
-                font-size: 3.2rem;
-            }
-            
-            .hero h2 {
-                font-size: 1.3rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-                padding: 8px 15px;
-            }
-            
-            .section-title h2 {
-                font-size: 2.2rem;
-            }
-            
-            .contact-item {
-                font-size: 1.1rem;
-                flex-wrap: wrap;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2.2rem;
             }
             
             .hero h1 span {
                 font-size: 2.5rem;
             }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
             
-            .hero h2 {
+            .hero h1 span {
+                font-size: 2rem;
+            }
+            
+            .hero p {
                 font-size: 1.1rem;
+            }
+            
+            .hero-content {
+                padding: 30px 15px;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h1 span {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
             }
             
             .hero-badge {
@@ -615,6 +592,10 @@
             .qr-box {
                 width: 150px;
                 height: 150px;
+            }
+            
+            .qr-box i {
+                font-size: 4rem;
             }
         }
     </style>
@@ -638,13 +619,12 @@
         </ul>
     </nav>
 
-    <!-- HERO CON PORTADA (TEXTO AJUSTADO) -->
+    <!-- HERO CON FERRARI (IMAGEN MÁS PEQUEÑA Y VISIBLE) -->
     <section class="hero" id="inicio">
         <div class="hero-background"></div>
         <div class="hero-content">
             <div class="hero-badge">⚡ CÚCUTA - NORTE DE SANTANDER ⚡</div>
-            <h2>BIENVENIDOS AL</h2>
-            <h1>TALLER DE LOS<br><span>ARRANQUES</span></h1>
+            <h1>ELECTRO AUTO<br><span>EL ROLO</span></h1>
             <p>⚡ Desvare 12V/24V • Arranques • Alternadores ⚡</p>
         </div>
     </section>
@@ -717,7 +697,7 @@
         </div>
     </section>
 
-    <!-- CONTACTO CON QR FUNCIONAL -->
+    <!-- CONTACTO CON QR FUNCIONAL (AHORA SÍ PUESTO) -->
     <section class="contact-section" id="contacto">
         <div class="contact-container">
             <h2>CONTACTO</h2>
@@ -736,7 +716,7 @@
                 </div>
             </div>
             
-            <!-- QR que lleva al WhatsApp de Yair -->
+            <!-- QR FUNCIONAL - LLEVA AL WHATSAPP DE YAIR -->
             <a href="https://wa.me/573342110057" class="qr-link" target="_blank">
                 <div class="qr-container">
                     <div class="qr-box">
@@ -754,7 +734,7 @@
             <span>⚡ ELECTRO AUTO</span> EL ROLO
         </div>
         
-        <!-- LINK A NG€ TARJETAS DIGITALES (tu WhatsApp) -->
+        <!-- LINK A NG€ TARJETAS DIGITALES (TU WHATSAPP) -->
         <div class="nge-link">
             <a href="https://wa.me/573342110057?text=Hola%2C%20quiero%20mi%20tarjeta%20digital" target="_blank">
                 <i class="fas fa-id-card"></i> NG€ Tarjetas Digitales
