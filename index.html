@@ -23,18 +23,18 @@
             overflow-x: hidden;
         }
 
-        /* ===== MENÚ HAMBURGUESA LIMPIO ===== */
+        /* ===== MENÚ HAMBURGUESA ===== */
         .menu-container {
             position: fixed;
-            top: 30px;
-            left: 30px;
+            top: 20px;
+            left: 20px;
             z-index: 1000;
         }
 
         .menu-toggle {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 215, 0, 0.1);
+            width: 55px;
+            height: 55px;
+            background: rgba(255, 215, 0, 0.15);
             backdrop-filter: blur(10px);
             border: 2px solid #ffd700;
             border-radius: 50%;
@@ -44,12 +44,11 @@
             align-items: center;
             cursor: pointer;
             transition: 0.3s;
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
         }
 
         .menu-toggle:hover {
             background: #ffd700;
-            transform: scale(1.1);
         }
 
         .menu-toggle:hover span {
@@ -57,7 +56,7 @@
         }
 
         .menu-toggle span {
-            width: 30px;
+            width: 25px;
             height: 3px;
             background: #ffd700;
             margin: 3px 0;
@@ -68,14 +67,14 @@
         .menu-nav {
             position: fixed;
             top: 0;
-            left: -300px;
-            width: 300px;
+            left: -280px;
+            width: 280px;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(0, 0, 0, 0.97);
             backdrop-filter: blur(20px);
             border-right: 3px solid #ffd700;
-            padding: 100px 30px 30px;
-            transition: 0.5s ease;
+            padding: 90px 20px 30px;
+            transition: 0.4s ease;
             z-index: 999;
         }
 
@@ -88,41 +87,38 @@
         }
 
         .menu-nav ul li {
-            margin: 30px 0;
+            margin: 25px 0;
         }
 
         .menu-nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 600;
+            font-size: 1.2rem;
+            font-weight: 500;
             display: flex;
             align-items: center;
             gap: 15px;
             transition: 0.3s;
-            padding: 12px 20px;
-            border-radius: 50px;
-            letter-spacing: 1px;
+            padding: 10px 15px;
+            border-radius: 40px;
         }
 
         .menu-nav ul li a:hover {
             background: #ffd700;
             color: #000;
-            transform: translateX(15px);
+            transform: translateX(10px);
         }
 
         .menu-nav ul li a i {
-            width: 30px;
-            font-size: 1.3rem;
+            width: 25px;
             color: #ffd700;
-            transition: 0.3s;
         }
 
         .menu-nav ul li a:hover i {
             color: #000;
         }
 
-        /* ===== HERO CON PORTADA ===== */
+        /* ===== HERO CON PORTADA (AJUSTADA) ===== */
         .hero {
             height: 100vh;
             position: relative;
@@ -139,86 +135,90 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('portada.jpg') center/cover;
+            background: linear-gradient(135deg, rgba(0,0,0,0.75), rgba(0,0,0,0.6)), url('portada.jpg') center/cover;
             background-attachment: fixed;
             z-index: -1;
-            animation: zoomEffect 10s infinite alternate;
+            animation: subtleZoom 15s infinite alternate;
         }
 
-        @keyframes zoomEffect {
+        @keyframes subtleZoom {
             from { transform: scale(1); }
-            to { transform: scale(1.1); }
+            to { transform: scale(1.05); }
         }
 
         .hero-content {
-            max-width: 1000px;
-            padding: 20px;
-            z-index: 2;
+            max-width: 900px;
+            padding: 0 20px;
+            width: 100%;
         }
 
         .hero-badge {
-            background: rgba(255, 215, 0, 0.15);
-            backdrop-filter: blur(10px);
-            border: 2px solid #ffd700;
-            padding: 12px 30px;
-            border-radius: 50px;
+            background: rgba(255, 215, 0, 0.2);
+            backdrop-filter: blur(8px);
+            border: 1.5px solid #ffd700;
+            padding: 8px 20px;
+            border-radius: 40px;
             display: inline-block;
-            font-weight: 600;
+            font-weight: 500;
             color: #ffd700;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 30px;
-            font-size: 1rem;
         }
 
         .hero h1 {
-            font-size: 5.5rem;
+            font-size: 4.5rem;
             font-weight: 800;
             line-height: 1.2;
-            margin-bottom: 25px;
-            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
         }
 
         .hero h1 span {
             color: #ffd700;
             display: block;
-            font-size: 6rem;
-            letter-spacing: 4px;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            color: #fff;
-            font-weight: 600;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            background: linear-gradient(45deg, #fff, #ffd700);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 5rem;
+            letter-spacing: 2px;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.8;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 600px;
+            margin: 15px auto 0;
+            line-height: 1.6;
+            background: rgba(0,0,0,0.3);
+            padding: 10px 20px;
+            border-radius: 40px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,215,0,0.3);
         }
 
         /* ===== SERVICIOS ===== */
         .services {
-            padding: 100px 20px;
+            padding: 80px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .section-title h2 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: #ffd700;
             position: relative;
             display: inline-block;
@@ -227,47 +227,46 @@
         .section-title h2::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -12px;
             left: 50%;
             transform: translateX(-50%);
-            width: 150px;
+            width: 120px;
             height: 3px;
             background: linear-gradient(90deg, transparent, #ffd700, transparent);
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .service-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 215, 0, 0.2);
             border-radius: 20px;
-            padding: 50px 30px;
+            padding: 40px 25px;
             text-align: center;
             transition: 0.3s;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(8px);
         }
 
         .service-card:hover {
-            transform: translateY(-20px);
+            transform: translateY(-15px);
             border-color: #ffd700;
-            box-shadow: 0 30px 40px rgba(255, 215, 0, 0.2);
-            background: rgba(255, 215, 0, 0.05);
+            box-shadow: 0 20px 30px rgba(255, 215, 0, 0.15);
         }
 
         .service-icon {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             background: #ffd700;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 30px;
-            font-size: 3.5rem;
+            margin: 0 auto 25px;
+            font-size: 3rem;
             color: #000;
             transition: 0.3s;
         }
@@ -278,21 +277,21 @@
         }
 
         .service-card h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 12px;
             color: #ffd700;
         }
 
         .service-card p {
             color: rgba(255, 255, 255, 0.8);
-            font-size: 1.1rem;
-            line-height: 1.8;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
-        /* ===== QUIENES SOMOS (MISIÓN, VISIÓN, VALORES) ===== */
+        /* ===== QUIENES SOMOS ===== */
         .about-section {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #000, #0f0f0f);
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #000, #0a0a0a);
         }
 
         .about-container {
@@ -302,99 +301,98 @@
 
         .about-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .about-title h2 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             color: #ffd700;
-            text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
 
         .about-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            gap: 30px;
         }
 
         .about-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 215, 0, 0.1);
-            border-radius: 30px;
-            padding: 40px 30px;
+            border-radius: 25px;
+            padding: 35px 25px;
             text-align: center;
             transition: 0.3s;
         }
 
         .about-card:hover {
             border-color: #ffd700;
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1);
         }
 
         .about-icon {
-            font-size: 4rem;
-            color: #ffd700;
-            margin-bottom: 25px;
-        }
-
-        .about-card h3 {
-            font-size: 2.2rem;
+            font-size: 3.5rem;
             color: #ffd700;
             margin-bottom: 20px;
         }
 
+        .about-card h3 {
+            font-size: 2rem;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
         .about-card p {
             color: rgba(255, 255, 255, 0.8);
-            line-height: 1.8;
-            font-size: 1.1rem;
+            line-height: 1.7;
+            font-size: 1rem;
             text-align: justify;
         }
 
         .about-card ul {
             list-style: none;
             text-align: left;
-            padding: 0 20px;
+            padding: 0 10px;
         }
 
         .about-card ul li {
-            margin: 15px 0;
-            font-size: 1.1rem;
+            margin: 12px 0;
+            font-size: 1rem;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             color: rgba(255, 255, 255, 0.9);
         }
 
         .about-card ul li i {
             color: #ffd700;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
 
-        /* ===== CONTACTO ===== */
+        /* ===== CONTACTO CON QR FUNCIONAL ===== */
         .contact-section {
-            padding: 100px 20px;
+            padding: 80px 20px;
             background: #0a0a0a;
         }
 
         .contact-container {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
             text-align: center;
         }
 
         .contact-container h2 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: #ffd700;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .contact-info {
             background: rgba(255, 215, 0, 0.05);
             border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 50px;
-            padding: 40px;
+            border-radius: 40px;
+            padding: 30px;
             margin-bottom: 40px;
         }
 
@@ -402,9 +400,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
-            font-size: 1.5rem;
-            padding: 20px;
+            gap: 15px;
+            font-size: 1.3rem;
+            padding: 15px;
             border-bottom: 1px solid rgba(255, 215, 0, 0.1);
         }
 
@@ -414,32 +412,44 @@
 
         .contact-item i {
             color: #ffd700;
-            font-size: 2rem;
-            width: 50px;
+            font-size: 1.8rem;
+            width: 40px;
+        }
+
+        /* QR FUNCIONAL - ENLACE AL WHATSAPP */
+        .qr-link {
+            display: inline-block;
+            text-decoration: none;
         }
 
         .qr-container {
             display: inline-block;
             text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .qr-container:hover {
+            transform: scale(1.05);
         }
 
         .qr-box {
-            width: 200px;
-            height: 200px;
-            background: linear-gradient(45deg, #ffd700, #ffaa00);
-            border-radius: 30px;
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(135deg, #ffd700, #ffaa00);
+            border-radius: 25px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+            margin: 0 auto 15px;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 30px #ffd700; }
-            50% { box-shadow: 0 0 70px #ffd700; }
-            100% { box-shadow: 0 0 30px #ffd700; }
+            0% { box-shadow: 0 0 25px #ffd700; }
+            50% { box-shadow: 0 0 50px #ffd700; }
+            100% { box-shadow: 0 0 25px #ffd700; }
         }
 
         .qr-box i {
@@ -449,22 +459,22 @@
 
         .qr-text {
             color: #ffd700;
-            font-size: 1.2rem;
-            font-weight: 600;
-            letter-spacing: 2px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
         }
 
-        /* ===== FOOTER ===== */
+        /* ===== FOOTER CON LINK A NG€ ===== */
         footer {
             background: #000;
-            padding: 50px 20px 30px;
+            padding: 40px 20px 20px;
             text-align: center;
             border-top: 2px solid #ffd700;
         }
 
         .footer-logo {
-            font-size: 2.5rem;
-            font-weight: 800;
+            font-size: 2rem;
+            font-weight: 700;
             margin-bottom: 20px;
         }
 
@@ -472,11 +482,32 @@
             color: #ffd700;
         }
 
+        .nge-link {
+            margin: 15px 0;
+            font-size: 0.95rem;
+        }
+
+        .nge-link a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            padding: 5px 15px;
+            border: 1px solid #ffd700;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        .nge-link a:hover {
+            background: #ffd700;
+            color: #000;
+        }
+
         .copyright {
             color: rgba(255, 255, 255, 0.6);
-            font-size: 1rem;
-            margin-top: 30px;
-            padding-top: 30px;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            padding-top: 20px;
             border-top: 1px solid rgba(255, 215, 0, 0.2);
         }
 
@@ -487,19 +518,19 @@
         /* ===== WHATSAPP ===== */
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 70px;
-            height: 70px;
+            bottom: 25px;
+            right: 25px;
+            width: 65px;
+            height: 65px;
             background: #25d366;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #fff;
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             text-decoration: none;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
             transition: 0.3s;
             z-index: 1000;
             animation: bounce 2s infinite;
@@ -507,55 +538,89 @@
 
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+            50% { transform: translateY(-12px); }
         }
 
         .whatsapp-float:hover {
             transform: scale(1.1) translateY(-5px);
-            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.8);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.8);
         }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 968px) {
             .about-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 25px;
             }
             
             .hero h1 {
-                font-size: 4rem;
+                font-size: 3.5rem;
             }
             
             .hero h1 span {
-                font-size: 4.5rem;
+                font-size: 4rem;
             }
             
             .hero h2 {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
         }
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 3rem;
+                font-size: 2.8rem;
             }
             
             .hero h1 span {
-                font-size: 3.5rem;
+                font-size: 3.2rem;
             }
             
             .hero h2 {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                padding: 8px 15px;
             }
             
             .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-item {
+                font-size: 1.1rem;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero h1 span {
                 font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.1rem;
+            }
+            
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 6px 15px;
+            }
+            
+            .qr-box {
+                width: 150px;
+                height: 150px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- MENÚ HAMBURGUESA LIMPIO -->
+    <!-- MENÚ HAMBURGUESA -->
     <div class="menu-container">
         <div class="menu-toggle" id="menuToggle">
             <span></span>
@@ -573,14 +638,14 @@
         </ul>
     </nav>
 
-    <!-- HERO CON PORTADA -->
+    <!-- HERO CON PORTADA (TEXTO AJUSTADO) -->
     <section class="hero" id="inicio">
         <div class="hero-background"></div>
         <div class="hero-content">
             <div class="hero-badge">⚡ CÚCUTA - NORTE DE SANTANDER ⚡</div>
             <h2>BIENVENIDOS AL</h2>
             <h1>TALLER DE LOS<br><span>ARRANQUES</span></h1>
-            <p>Especialistas en sistemas eléctricos automotrices<br>Desvare 12V/24V · Arranques · Alternadores</p>
+            <p>⚡ Desvare 12V/24V • Arranques • Alternadores ⚡</p>
         </div>
     </section>
 
@@ -602,19 +667,19 @@
                     <i class="fas fa-car-battery"></i>
                 </div>
                 <h3>ARRANQUES</h3>
-                <p>Arreglo profesional<br>de motores de arranque</p>
+                <p>Reparación profesional<br>de motores de arranque</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-charging-station"></i>
                 </div>
                 <h3>ALTERNADORES</h3>
-                <p>Reparación especializada<br>de alternadores</p>
+                <p>Especialistas en<br>reparación de alternadores</p>
             </div>
         </div>
     </section>
 
-    <!-- QUIENES SOMOS (MISIÓN, VISIÓN, VALORES) -->
+    <!-- QUIENES SOMOS -->
     <section class="about-section" id="quienes-somos">
         <div class="about-container">
             <div class="about-title">
@@ -652,7 +717,7 @@
         </div>
     </section>
 
-    <!-- CONTACTO -->
+    <!-- CONTACTO CON QR FUNCIONAL -->
     <section class="contact-section" id="contacto">
         <div class="contact-container">
             <h2>CONTACTO</h2>
@@ -670,27 +735,39 @@
                     <span>Técnico: YAIR</span>
                 </div>
             </div>
-            <div class="qr-container">
-                <div class="qr-box">
-                    <i class="fas fa-qrcode"></i>
+            
+            <!-- QR que lleva al WhatsApp de Yair -->
+            <a href="https://wa.me/573342110057" class="qr-link" target="_blank">
+                <div class="qr-container">
+                    <div class="qr-box">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <div class="qr-text">ESCANEA EL CÓDIGO</div>
                 </div>
-                <div class="qr-text">ESCANEA EL CÓDIGO</div>
-            </div>
+            </a>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER CON LINK A NG€ TARJETAS DIGITALES -->
     <footer>
         <div class="footer-logo">
             <span>⚡ ELECTRO AUTO</span> EL ROLO
         </div>
+        
+        <!-- LINK A NG€ TARJETAS DIGITALES (tu WhatsApp) -->
+        <div class="nge-link">
+            <a href="https://wa.me/573342110057?text=Hola%2C%20quiero%20mi%20tarjeta%20digital" target="_blank">
+                <i class="fas fa-id-card"></i> NG€ Tarjetas Digitales
+            </a>
+        </div>
+        
         <div class="copyright">
             <p>© 2025 ELECTRO AUTO EL ROLO - Todos los derechos reservados</p>
-            <p>Hecho con <i class="fas fa-heart"></i> en Cúcuta para los amantes de los arranques</p>
+            <p>Hecho con <i class="fas fa-heart"></i> en Cúcuta</p>
         </div>
     </footer>
 
-    <!-- WHATSAPP -->
+    <!-- WHATSAPP FLOTANTE -->
     <a href="https://wa.me/573342110057" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -704,14 +781,12 @@
             menuNav.classList.toggle('active');
         });
 
-        // Cerrar menú al hacer clic en un enlace
         document.querySelectorAll('.menu-nav a').forEach(link => {
             link.addEventListener('click', () => {
                 menuNav.classList.remove('active');
             });
         });
 
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
